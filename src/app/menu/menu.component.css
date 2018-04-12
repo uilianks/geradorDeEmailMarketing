@@ -1,0 +1,35 @@
+.menu-lateral{
+    background: white;
+    height: 974px;
+    padding-top: 40px;
+    -webkit-box-shadow: 0px 5px 30px 0px #847d7d;
+    box-shadow: 0px 5px 30px 0px #847d7d;
+    position: fixed;
+    width: 244px;
+    padding: 0px 20px;
+    padding-top: 40px;
+}
+.titulo-mkt h1 {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #b4aeae;
+}
+.titulo-mkt {
+    width: 100%;
+    border-bottom: 2px solid #d5d3d3;
+    padding-bottom: 32px;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+li {
+    background-color: #f44336;
+    box-shadow: 0 12px 20px -10px rgba(244,67,54,.28), 0 4px 20px 0 rgba(0,0,0,.12), 0 7px 8px -5px rgba(244,67,54,.2);
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

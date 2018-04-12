@@ -1,0 +1,213 @@
+<div class="col-sm-6" style="padding-top:110px">
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+     <style>
+     td {
+    border: none;
+}
+.destaques.first-item {
+    display: none;
+}
+.normais.first-item {
+    display: none;
+}
+.vagas.first-item {
+    display: none;
+}
+.colaboradores.first-item {
+    display: none;
+}
+.aniversarioantes.first-item {
+    display: none;
+}
+.dbnamidia.first-item {
+    display: none;
+}
+</style>
+    <body>
+        <table width="620" bgcolor="#FFFFFF" align="center" cellpadding="0" cellspacing="0" border="none" style="display:block">
+            <tr>
+             <td width="620" align="center" style="display:block"><img src="http://www.dbserver.com.br/clipping/Clipping/2014/novo-2014/img/header.png">
+             </td>
+           </tr>
+         </table>
+         <!-- HEADER ACIMA -->
+         <div class="destaques" *ngFor="let todo of destaques;let first = first; let last = last" [class.first-item]="first">
+            <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0" style="display:block">
+              <tr>
+                <td style="text-align: center; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px" width="620" height="35"><p>{{todo.title}}<br></p></td>
+             </tr> 
+           </table>  
+         <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0" style="display:block">
+            <tr>
+              <td width="15">&nbsp;</td>
+              <td width="600" align="center"><img style="display:block;" src="{{todo.imagem}}"/></td>
+              <td width="15">&nbsp;</td>
+            </tr>
+          </table>
+          <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="15">&nbsp;</td>
+            </tr>
+          </table>
+          <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="15">&nbsp;</td>
+              <td width="600"><div [froalaView]="todo.descricao" style="border: none;
+                text-align: left;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                color: #333333;
+                padding-left: 14px;
+                word-break: break-word;"></div></td>
+              <td width="15">&nbsp;</td>
+            </tr>
+          </table>
+          <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="5" cellspacing="0">
+            <tr>
+              <td width="620" align="center"><img style="display:block;" src="http://www.dbserver.com.br/clipping/Clipping/2014/novo-2014/img/divisor.png"></td>
+            </tr>
+          </table>
+          </div>
+          <div class="normais" *ngFor="let a of normais;let first = first; let last = last" [class.first-item]="first">
+              <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+                  <tr style="border: none;">
+                      <td width="620" height="35" style="text-align: left; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px; padding-left: 15px; padding-right: 15px">{{a.titlen}}</td>
+                    </tr>
+                    <tr style="border: none;">
+                      <td width="620" height="35" style="border: none;text-align: left;font-family: Arial, Helvetica, sans-serif;font-size: 13px;color: #333333; padding-left: 14px;word-break: break-word;" width="620" height="35" [froalaView]="a.descricaon"></td>
+                      <td width="220" height="35"><img src="{{a.imagemn}}" alt=""></td>
+                    </tr>
+              </table>
+              <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="620" align="center"><img style="display:block;" src="http://www.dbserver.com.br/clipping/Clipping/2014/novo-2014/img/divisor.png"></td>
+                </tr>
+              </table>
+        
+          </div>
+          <div class="vagas" *ngFor="let v of vagas; let first = first; let last = last" [class.first-item]="first">
+              <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="8" cellspacing="0">
+                  <tr>
+                     <td style="text-align: left; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px" height="5">{{v.titlev}}</td>
+                 </tr>
+           </table>
+           <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                 <td width="10">&nbsp;</td>
+       
+               <td width="208" align="left" ><img style="display:block;" src="{{v.imagemv}}"></td>
+                          
+          <td width="10">&nbsp;</td>
+       
+           <td width="382" height="170" align="right"><div [froalaView]="v.descricaov"></div></td>
+                <td width="10">&nbsp;</td>
+       
+          </tr>     
+       </table>
+       <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="620" align="center"><img style="display:block;" src="http://www.dbserver.com.br/clipping/Clipping/2014/novo-2014/img/divisor.png"></td>
+          </tr>
+        </table>
+          </div>
+          <div class="colaboradores" *ngFor="let c of colaboradores; let first = first; let last = last" [class.first-item]="first">
+              <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="8" cellspacing="0">
+                  <tr>
+                     <td style="text-align: left; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px" height="5">{{c.titlec}}</td>
+                 </tr>
+           </table>
+           <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+
+            </table>
+            <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+	  
+
+  
+                         <tr>
+                          <td width="15">&nbsp;</td>
+                        <td width="130" align="center" ><img style="display:block;" src="{{c.imagemc}}"></td>
+                                          
+                   <td width="35">&nbsp;</td>
+                
+                    <td width="620" height="170" align="right">
+                        <div [froalaView]="c.descricaoc"></div>
+                    </td>
+                         <td width="15">&nbsp;</td>
+                   </tr>
+                   
+                        
+                       
+                               <tr>
+                               
+                </table>
+                <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="620" align="center"><img style="display:block;" src="http://www.dbserver.com.br/clipping/Clipping/2014/novo-2014/img/divisor.png"></td>
+                    </tr>
+                  </table>
+          </div>
+          <div class="aniversarioantes" *ngFor="let a of aniversariantes; let first = first; let last = last" [class.first-item]="first">
+              <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="8" cellspacing="0">
+                  <tr>
+                     <td style="text-align: left; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px" height="30">{{a.titlea}}</td>
+                 </tr>
+           </table>
+           <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+               <td width="20">&nbsp;</td>
+       
+               <td width="500"  align="left"><div [froalaView]="a.descricaoa" style="border: none;
+                text-align: left;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                color: #333333;
+                padding-left: 14px;
+                word-break: break-word;"></div>
+           </td>   
+           
+          <td width="15">&nbsp;</td>
+                <td width="130" height="140" align="center" ><img style="display:block;" src="{{a.imagema}}"></td>
+                
+                   <td width="15">&nbsp;</td>
+       </tr>     
+       </table>
+          </div>
+          <div class="dbnamidia" *ngFor="let m of dbnamidia; let first = first; let last = last" [class.first-item]="first">
+              <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="8" cellspacing="0">
+                  <tr>
+                     <td style="text-align: left; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:16px" height="30">{{m.titlem}}</td>
+                 </tr>
+           </table>
+           <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                   <td width="15">&nbsp;</td>
+                   <td width="500"  align="left"><div [froalaView]="m.descricaom"></div></td>
+                 </tr>     
+           </table>
+          </div>
+          <!-- ABAIXO TEM O foooter -->
+          <table width="620" height="20" bgcolor="#333333" align="center" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                 <td width="620" height="20"> 
+                   <p style="text-align:right; font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#ffffff; font-weight: bold;">Porto Alegre, 14 de Março de 2016</p>
+                   </td>
+             </tr>
+       </table>
+          <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="5" cellspacing="0">
+              <tr>
+            <td width="620" align="center"><img style="display:block;" src="http://www.dbserver.com.br/clipping/Clipping/2014/novo-2014/img/divisor.png"></td>
+            </tr>
+        </table>
+          <table width="620" height="90" bgcolor="#FFFFFF" align="center" cellpadding="0" cellspacing="0" border="none" style="display:block">
+              <tr>
+               <td width="620" align="center"><img src="http://www.dbserver.com.br/clipping/Clipping/2016/novo/footer.jpg">
+               </td>
+             </tr>
+           </table>
+        </body>
+    </html>
+</div>

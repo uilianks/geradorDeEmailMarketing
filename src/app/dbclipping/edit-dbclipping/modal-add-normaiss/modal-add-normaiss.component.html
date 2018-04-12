@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <h4 class="modal-title">Noticias Normais</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <input class="new-todo" placeholder="Titulo" [(ngModel)]="newTitlen"  autofocus>
+      <input class="new-todo" placeholder="Imagem" [(ngModel)]="newImagemn"  autofocus>
+      <div placeholder="Descrição" [froalaEditor] [(froalaModel)]="newDescn"></div>
+      <div [froalaView]="newDescn"></div>
+      <button class="destroy" (click)="addTitleN()">vai</button>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="c('Close click')">Close</button>
+  </div>

@@ -1,0 +1,15 @@
+table.table-background {
+    background-color: #E4E4E4;
+}
+p{
+    text-align: center; 
+    color:#050737; 
+    font-family:Arial, Helvetica, sans-serif; 
+    font-weight: bold; 
+    font-size:16px;
+}
+p.desc {
+    text-align: left;
+    font-weight: normal;
+    font-size: 14px;
+}

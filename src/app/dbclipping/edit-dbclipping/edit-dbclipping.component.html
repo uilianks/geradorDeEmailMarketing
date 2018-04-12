@@ -1,0 +1,53 @@
+<!-- MODAL DE NOTICIAS EM DESTAQUE -->
+<ng-template #content let-c="close" let-d="dismiss">
+    <app-modal-add-destaques></app-modal-add-destaques>
+</ng-template>
+
+  <!-- MODAL DE NOTICIAS NORMAIS -->
+<ng-template #contentn let-c="close" let-d="dismiss">
+    <app-modal-add-normaiss></app-modal-add-normaiss>
+</ng-template>
+
+  <ng-template #contentv let-c="close" let-d="dismiss">
+      <app-modal-add-vagas></app-modal-add-vagas>
+  </ng-template>
+
+<ng-template #contentc let-c="close" let-d="dismiss">
+    <app-modal-add-colaboradores></app-modal-add-colaboradores>
+</ng-template>
+<ng-template #contenta let-c="close" let-d="dismiss">
+    <app-modal-add-aniversariantes></app-modal-add-aniversariantes>
+</ng-template>
+<ng-template #contentm let-c="close" let-d="dismiss">
+        <app-modal-add-dbnamidia></app-modal-add-dbnamidia>
+</ng-template>
+
+  <!-- BOTOES PARA ABRIR OS MODAIS -->
+
+    <div class="conter-buttons">
+        <button class="btn btn-outline-primary mb-1" (click)="openLgn(contentn)">Noticias Normais</button>
+        <button class="btn btn-outline-primary mb-1" (click)="openLg(content)">Noticias em Destaque</button>
+        <button class="btn btn-outline-primary mb-1" (click)="openLgv(contentv)">Vagas da semana</button>
+        <button class="btn btn-outline-primary mb-1" (click)="openLgc(contentc)">colaboradores</button>
+        <button class="btn btn-outline-primary mb-1" (click)="openLga(contenta)">Aniversarios</button>
+        <button class="btn btn-outline-primary mb-1" (click)="openLga(contentm)">DB na midia</button>
+
+
+      </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
