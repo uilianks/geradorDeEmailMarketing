@@ -13,3 +13,6 @@ p.desc {
     font-weight: normal;
     font-size: 14px;
 }
+ul.first-item {
+    display: none;
+}

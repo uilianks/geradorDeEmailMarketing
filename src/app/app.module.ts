@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { DbclippingComponent } from './dbclipping/dbclipping.component';
 import { MenuComponent } from './menu/menu.component';
@@ -19,6 +18,8 @@ import { ModalAddVagasComponent } from './dbclipping/edit-dbclipping/modal-add-v
 import { ModalAddColaboradoresComponent } from './dbclipping/edit-dbclipping/modal-add-colaboradores/modal-add-colaboradores.component';
 import { ModalAddAniversariantesComponent } from './dbclipping/edit-dbclipping/modal-add-aniversariantes/modal-add-aniversariantes.component';
 import { ModalAddDbnamidiaComponent } from './dbclipping/edit-dbclipping/modal-add-dbnamidia/modal-add-dbnamidia.component';
+import { DragDropDirectiveModule} from "angular4-drag-drop";
+import { AngularDraggableModule } from 'angular2-draggable';
 
 
 
@@ -34,8 +35,8 @@ import { ModalAddDbnamidiaComponent } from './dbclipping/edit-dbclipping/modal-a
     ModalAddNormaissComponent,
     ModalAddVagasComponent,
     ModalAddColaboradoresComponent,
-    ModalAddAniversariantesComponent,
-    ModalAddDbnamidiaComponent,
+    ModalAddAniversariantesComponent, 
+    ModalAddDbnamidiaComponent
 
   ],
   imports: [
@@ -44,7 +45,9 @@ import { ModalAddDbnamidiaComponent } from './dbclipping/edit-dbclipping/modal-a
     FormsModule,
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    DragDropDirectiveModule,
+    AngularDraggableModule
   ],
   providers: [DbclippingService],
   bootstrap: [AppComponent]

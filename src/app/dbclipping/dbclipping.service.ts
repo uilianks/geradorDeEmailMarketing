@@ -3,24 +3,12 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class DbclippingService {
-  destaques = [
-    { title: '',imagem: '', descricao: '' }
-  ];
-  normais = [
-    { titlen: '',imagemn: '', descricaon: '' }
-  ];
-  vagas = [
-    { titlev: '',imagemv: '', descricaov: '' }
-  ];
-  colaboradores = [
-    { titlec: '',imagemc: '', descricaoc: '' }
-  ];
-  aniversariantes = [
-    { titlea: '',imagema: '', descricaoa: '' }
-  ];
-  dbnamidia = [
-    { titlem: '', descricaom: '' }
-  ];
+  destaques = [];
+  normais = [];
+  vagas = [];
+  colaboradores = [];
+  aniversariantes = [];
+  dbnamidia = [];
   
 
 

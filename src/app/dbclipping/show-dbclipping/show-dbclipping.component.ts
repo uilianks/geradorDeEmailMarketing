@@ -16,14 +16,7 @@ export class ShowDbclippingComponent implements OnInit {
   colaboradores: any
   aniversariantes: any
   dbnamidia: any
-
-
-
-
-
-
- 
-
+  destaqueTitulo = false
 
   constructor(private dbservice: DbclippingService) { }
 
@@ -36,10 +29,90 @@ export class ShowDbclippingComponent implements OnInit {
     this.dbservice.aniversariantesShow.subscribe(aniversariantes => this.aniversariantes = aniversariantes)
     this.dbservice.dbnamidiaShow.subscribe(dbnamidia => this.dbnamidia = dbnamidia)
 
+  }
 
+ //MOVE UP DOWN DO DESTAQUES
+  moveUp(x:number){
+    var temp = this.destaques[x]
+    this.destaques[x] = this.destaques[x-1]
+    this.destaques[x-1] = temp
+    this.destaqueTitulo = true
 
+  }
 
+  moveDown(x:number){
+    var temp = this.destaques[x]
+    this.destaques[x] = this.destaques[x+1]
+    this.destaques[x+1] = temp
+  }
 
+ //MOVE UP DOWN DAS NOTICIAS NORMAIS
+
+  moveUpN(y:number){
+    var temp = this.normais[y]
+    this.normais[y] = this.normais[y-1]
+    this.normais[y-1] = temp
+  }
+
+  moveDownN(y:number){
+    var temp = this.normais[y]
+    this.normais[y] = this.normais[y+1]
+    this.normais[y+1] = temp
+  }
+
+  // vagas da semana
+
+  moveUpV(v:number){
+    var temp = this.vagas[v]
+    this.vagas[v] = this.vagas[v-1]
+    this.vagas[v-1] = temp
+  }
+
+  moveDownV(v:number){
+    var temp = this.vagas[v]
+    this.vagas[v] = this.vagas[v+1]
+    this.vagas[v+1] = temp
+  }
+  //colaboradores
+  
+  moveUpC(c:number){
+    var temp = this.colaboradores[c]
+    this.colaboradores[c] = this.colaboradores[c-1]
+    this.colaboradores[c-1] = temp
+  }
+
+  moveDownC(c:number){
+    var temp = this.colaboradores[c]
+    this.colaboradores[c] = this.colaboradores[c+1]
+    this.colaboradores[c+1] = temp
+  }
+
+  //aniversaios
+
+  moveUpA(c:number){
+    var temp = this.aniversariantes[c]
+    this.aniversariantes[c] = this.aniversariantes[c-1]
+    this.aniversariantes[c-1] = temp
+  }
+
+  moveDownA(c:number){
+    var temp = this.aniversariantes[c]
+    this.aniversariantes[c] = this.aniversariantes[c+1]
+    this.aniversariantes[c+1] = temp
+  }
+
+  //db nam idia
+
+  moveUpD(c:number){
+    var temp = this.dbnamidia[c]
+    this.dbnamidia[c] = this.dbnamidia[c-1]
+    this.dbnamidia[c-1] = temp
+  }
+
+  moveDownD(c:number){
+    var temp = this.dbnamidia[c]
+    this.dbnamidia[c] = this.dbnamidia[c+1]
+    this.dbnamidia[c+1] = temp
   }
 
 }

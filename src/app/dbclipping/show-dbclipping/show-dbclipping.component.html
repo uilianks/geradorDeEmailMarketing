@@ -1,3 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <!-- <h1 *ngIf="destaqueTitulo">Destaques</h1>-->
+      <ul *ngFor="let todo of destaques;let first = first; let last = last; let x = index">
+        <li>{{todo.title}} <button (click)="moveUp(x)">Up</button><button (click)="moveDown(x)">Down</button></li>
+        
+      </ul>
+      <!--<h1>Normais</h1>-->
+      <ul *ngFor="let todo of normais;let first = first; let last = last; let y = index">
+        <li>{{todo.titlen}} <button (click)="moveUpN(y)">Up</button><button (click)="moveDownN(y)">Down</button></li>
+      </ul>
+      <!-- vagas da semana -->
+      <ul *ngFor="let todo of vagas;let first = first; let last = last; let v = index">
+          <li>{{todo.titlev}} <button (click)="moveUpV(v)">Up</button><button (click)="moveDownV(v)">Down</button></li>
+        </ul>
+      <!--Colaboradores-->
+      <ul *ngFor="let todo of colaboradores;let first = first; let last = last; let c = index">
+          <li>{{todo.titlec}} <button (click)="moveUpC(c)">Up</button><button (click)="moveDownC(c)">Down</button></li>
+        </ul>
+        <!-- anoversario -->
+        <ul *ngFor="let todo of aniversariantes;let first = first; let last = last; let l = index">
+            <li>{{todo.titlea}} <button (click)="moveUpA(l)">Up</button><button (click)="moveDownA(l)">Down</button></li>
+          </ul>
+          <ul *ngFor="let todo of dbnamidia;let first = first; let last = last; let z = index">
+              <li>{{todo.titlem}} <button (click)="moveUpD(z)">Up</button><button (click)="moveDownD(z)">Down</button></li>
+            </ul>
+    </div>
+  </div>
+</div>
 <div class="col-sm-6" style="padding-top:110px">
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,7 +65,7 @@
            </tr>
          </table>
          <!-- HEADER ACIMA -->
-         <div class="destaques" *ngFor="let todo of destaques;let first = first; let last = last" [class.first-item]="first">
+         <div class="destaques" *ngFor="let todo of destaques">
             <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0" style="display:block">
               <tr>
                 <td style="text-align: center; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px" width="620" height="35"><p>{{todo.title}}<br></p></td>
@@ -72,7 +102,7 @@
             </tr>
           </table>
           </div>
-          <div class="normais" *ngFor="let a of normais;let first = first; let last = last" [class.first-item]="first">
+          <div class="normais" *ngFor="let a of normais">
               <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="0" cellspacing="0">
                   <tr style="border: none;">
                       <td width="620" height="35" style="text-align: left; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px; padding-left: 15px; padding-right: 15px">{{a.titlen}}</td>
@@ -89,7 +119,7 @@
               </table>
         
           </div>
-          <div class="vagas" *ngFor="let v of vagas; let first = first; let last = last" [class.first-item]="first">
+          <div class="vagas" *ngFor="let v of vagas;">
               <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="8" cellspacing="0">
                   <tr>
                      <td style="text-align: left; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px" height="5">{{v.titlev}}</td>
@@ -103,7 +133,7 @@
                           
           <td width="10">&nbsp;</td>
        
-           <td width="382" height="170" align="right"><div [froalaView]="v.descricaov"></div></td>
+           <td width="382" height="170" align="right"><div [froalaView]="v.descricaov" style="text-align: left;"></div></td>
                 <td width="10">&nbsp;</td>
        
           </tr>     
@@ -114,7 +144,7 @@
           </tr>
         </table>
           </div>
-          <div class="colaboradores" *ngFor="let c of colaboradores; let first = first; let last = last" [class.first-item]="first">
+          <div class="colaboradores" *ngFor="let c of colaboradores;">
               <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="8" cellspacing="0">
                   <tr>
                      <td style="text-align: left; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px" height="5">{{c.titlec}}</td>
@@ -134,7 +164,7 @@
                    <td width="35">&nbsp;</td>
                 
                     <td width="620" height="170" align="right">
-                        <div [froalaView]="c.descricaoc"></div>
+                        <div [froalaView]="c.descricaoc" style="text-align: left;"></div>
                     </td>
                          <td width="15">&nbsp;</td>
                    </tr>
@@ -150,7 +180,7 @@
                     </tr>
                   </table>
           </div>
-          <div class="aniversarioantes" *ngFor="let a of aniversariantes; let first = first; let last = last" [class.first-item]="first">
+          <div class="aniversarioantes" *ngFor="let a of aniversariantes;">
               <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="8" cellspacing="0">
                   <tr>
                      <td style="text-align: left; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight: bold; font-size:16px" height="30">{{a.titlea}}</td>
@@ -176,7 +206,7 @@
        </tr>     
        </table>
           </div>
-          <div class="dbnamidia" *ngFor="let m of dbnamidia; let first = first; let last = last" [class.first-item]="first">
+          <div class="dbnamidia" *ngFor="let m of dbnamidia;">
               <table width="620" bgcolor="#E4E4E4" align="center" border="0" cellpadding="8" cellspacing="0">
                   <tr>
                      <td style="text-align: left; color:#050737; font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:16px" height="30">{{m.titlem}}</td>
