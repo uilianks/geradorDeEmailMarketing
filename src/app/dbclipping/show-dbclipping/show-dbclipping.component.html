@@ -2,29 +2,30 @@
   <div class="row">
     <div class="col-sm-12">
       <!-- <h1 *ngIf="destaqueTitulo">Destaques</h1>-->
+      <div class="conter-move-up">
       <ul *ngFor="let todo of destaques;let first = first; let last = last; let x = index">
-        <li>{{todo.title}} <button (click)="moveUp(x)">Up</button><button (click)="moveDown(x)">Down</button></li>
-        
+        <li>{{todo.title}} <button (click)="moveUp(x)">Up</button><button (click)="moveDown(x)">Down</button><button (click)="deleteDestaques(x)">Delete</button></li>
       </ul>
       <!--<h1>Normais</h1>-->
       <ul *ngFor="let todo of normais;let first = first; let last = last; let y = index">
-        <li>{{todo.titlen}} <button (click)="moveUpN(y)">Up</button><button (click)="moveDownN(y)">Down</button></li>
+        <li>{{todo.titlen}} <button (click)="moveUpN(y)">Up</button><button (click)="moveDownN(y)">Down</button><button (click)="deleteNormais(y)">Delete</button></li>
       </ul>
       <!-- vagas da semana -->
       <ul *ngFor="let todo of vagas;let first = first; let last = last; let v = index">
-          <li>{{todo.titlev}} <button (click)="moveUpV(v)">Up</button><button (click)="moveDownV(v)">Down</button></li>
+          <li>{{todo.titlev}} <button (click)="moveUpV(v)">Up</button><button (click)="moveDownV(v)">Down</button><button (click)="deleteVagas(v)">Delete</button></li>
         </ul>
       <!--Colaboradores-->
       <ul *ngFor="let todo of colaboradores;let first = first; let last = last; let c = index">
-          <li>{{todo.titlec}} <button (click)="moveUpC(c)">Up</button><button (click)="moveDownC(c)">Down</button></li>
+          <li>{{todo.titlec}} <button (click)="moveUpC(c)">Up</button><button (click)="moveDownC(c)">Down</button><button (click)="deleteColab(c)">Delete</button></li>
         </ul>
         <!-- anoversario -->
         <ul *ngFor="let todo of aniversariantes;let first = first; let last = last; let l = index">
-            <li>{{todo.titlea}} <button (click)="moveUpA(l)">Up</button><button (click)="moveDownA(l)">Down</button></li>
+            <li>{{todo.titlea}} <button (click)="moveUpA(l)">Up</button><button (click)="moveDownA(l)">Down</button><button (click)="deleteAniver(l)">Delete</button></li>
           </ul>
           <ul *ngFor="let todo of dbnamidia;let first = first; let last = last; let z = index">
-              <li>{{todo.titlem}} <button (click)="moveUpD(z)">Up</button><button (click)="moveDownD(z)">Down</button></li>
+              <li>{{todo.titlem}} <button (click)="moveUpD(z)">Up</button><button (click)="moveDownD(z)">Down</button><button (click)="deleteDBNamidia(z)">Delete</button></li>
             </ul>
+          </div>
     </div>
   </div>
 </div>

@@ -31,13 +31,35 @@ export class ShowDbclippingComponent implements OnInit {
 
   }
 
+  deleteDestaques(x: number){
+    this.destaques.splice(x, 1)
+  }
+  deleteNormais(x: number){
+    this.normais.splice(x, 1)
+  }
+  deleteVagas(x: number){
+    this.vagas.splice(x,1)
+  }
+  deleteColab(x: number){
+    this.colaboradores.splice(x,1)
+  }
+  deleteAniver(x: number){
+    this.aniversariantes.splice(x,1)
+  }
+  deleteDBNamidia(x: number){
+    this.dbnamidia.splice(x,1)
+  }
+
  //MOVE UP DOWN DO DESTAQUES
   moveUp(x:number){
-    var temp = this.destaques[x]
-    this.destaques[x] = this.destaques[x-1]
-    this.destaques[x-1] = temp
-    this.destaqueTitulo = true
-
+    if(x < x){
+      console.log("erro")
+    }else{
+      var temp = this.destaques[x]
+      this.destaques[x] = this.destaques[x-1]
+      this.destaques[x-1] = temp
+    }
+ 
   }
 
   moveDown(x:number){

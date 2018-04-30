@@ -1,16 +1,16 @@
-<div class="modal-header">
-    <h4 class="modal-title">Destaques</h4>
-    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-      <input class="new-todo" placeholder="Titulo" [(ngModel)]="newTitlev"  autofocus>
-      <input class="new-todo" placeholder="Imagem" [(ngModel)]="newImagemv"  autofocus>
-      <div placeholder="Descrição" [froalaEditor] [(froalaModel)]="newDescv"></div>
-      <div [froalaView]="newDescv"></div>
-      <button class="destroy" (click)="addTitleV()">vai</button>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-light" (click)="c('Close click')">Close</button>
-  </div>
+
+    <div class="modal-header" >
+      <h4 class="modal-title">Destaques</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <input class="new-todo" placeholder="Titulo" [(ngModel)]="newTitlev"  autofocus>
+        <input class="new-todo" placeholder="Imagem" [(ngModel)]="newImagemv"  autofocus>
+        <div placeholder="Descrição" [froalaEditor] [(froalaModel)]="newDescv"></div>
+        <div [froalaView]="newDescv"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-light destroy" (click)="addTitleV()">Cadastrar</button>
+    </div>

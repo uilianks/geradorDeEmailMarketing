@@ -43,3 +43,7 @@ li {
     margin-top: 20px;
     line-height: 50px;
 }
+.is-active {
+    cursor: default;
+    text-decoration: none;
+}

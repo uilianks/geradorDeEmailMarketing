@@ -1,8 +1,10 @@
+import { Http, HttpModule } from '@angular/http';
+import { LoginService } from './login-page/login.service';
 import { DbclippingService } from './dbclipping/dbclipping.service';
 import { ROUTES } from './app.router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DbclippingComponent } from './dbclipping/dbclipping.component';
@@ -20,6 +22,8 @@ import { ModalAddAniversariantesComponent } from './dbclipping/edit-dbclipping/m
 import { ModalAddDbnamidiaComponent } from './dbclipping/edit-dbclipping/modal-add-dbnamidia/modal-add-dbnamidia.component';
 import { DragDropDirectiveModule} from "angular4-drag-drop";
 import { AngularDraggableModule } from 'angular2-draggable';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -36,7 +40,7 @@ import { AngularDraggableModule } from 'angular2-draggable';
     ModalAddVagasComponent,
     ModalAddColaboradoresComponent,
     ModalAddAniversariantesComponent, 
-    ModalAddDbnamidiaComponent
+    ModalAddDbnamidiaComponent, LoginPageComponent
 
   ],
   imports: [
@@ -47,9 +51,13 @@ import { AngularDraggableModule } from 'angular2-draggable';
     FroalaViewModule.forRoot(),
     NgbModule.forRoot(),
     DragDropDirectiveModule,
-    AngularDraggableModule
+    AngularDraggableModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [DbclippingService],
+  providers: [DbclippingService,LoginService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

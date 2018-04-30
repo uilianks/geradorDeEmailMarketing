@@ -1,0 +1,10 @@
+button.destroy {
+    background: #00BCD4;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 1px 1px 1px #9E9E9E;
+    font-weight: bold;
+    padding: 10px 20px;
+    float: right;
+    color: white;
+}

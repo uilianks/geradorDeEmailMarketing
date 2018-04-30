@@ -1,5 +1,5 @@
 import { DbclippingService } from './../../dbclipping.service';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter, ViewChild, ViewEncapsulation } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -13,8 +13,10 @@ export class ModalAddDestaquesComponent implements OnInit {
   private newTitle;
   private newImagem;
   @Output() private newDesc;
-  
+
+
   constructor(private dbclippingService: DbclippingService,private modalService: NgbModal) { }
+  closeResult: string;
 
   ngOnInit() {
   }
@@ -33,5 +35,6 @@ export class ModalAddDestaquesComponent implements OnInit {
       this.destaques = destaques;
     });
   }
+ 
  
 }

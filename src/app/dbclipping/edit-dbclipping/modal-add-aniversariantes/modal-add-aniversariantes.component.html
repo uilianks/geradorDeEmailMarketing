@@ -9,8 +9,7 @@
       <input class="new-todo" placeholder="Imagem" [(ngModel)]="newImagema"  autofocus>
       <div placeholder="Descrição" [froalaEditor] [(froalaModel)]="newDesca"></div>
       <div [froalaView]="newDesca"></div>
-      <button class="destroy" (click)="addTitleA()">vai</button>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-light" (click)="c('Close click')">Close</button>
+    <button class="btn btn-light destroy" (click)="addTitleA()">Cadastrar</button>
   </div>
