@@ -3,8 +3,14 @@
     {
       "id": 1,
       "name": "Administrador",
-      "username": "administrador",
+      "username": "mkt",
       "password": "1"
+    },
+    {
+      "id": 1,
+      "name": "Administrador",
+      "username": "uilian",
+      "password": "0okm6tfc"
     }
   ]
 }
