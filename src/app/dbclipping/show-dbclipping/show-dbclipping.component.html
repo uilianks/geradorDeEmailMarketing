@@ -3,7 +3,7 @@
     <div class="col-sm-12">
       <!-- <h1 *ngIf="destaqueTitulo">Destaques</h1>-->
       <div class="conter-move-up">
-      <ul *ngFor="let todo of destaques;let first = first; let last = last; let x = index">
+      <ul *ngFor="let todo of destaques;let first = first; let last = last; let x = index;let y = index">
         <li>{{todo.title}} <button (click)="moveUp(x)">Up</button><button (click)="moveDown(x)">Down</button><button (click)="deleteDestaques(x)">Delete</button></li>
       </ul>
       <!--<h1>Normais</h1>-->

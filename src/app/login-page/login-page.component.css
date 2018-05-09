@@ -1,0 +1,22 @@
+form button {
+    background: #f44336;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+form {
+    width: 30%;
+    background: #f44336;
+    padding: 30px;
+    border-radius: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 220px;
+    background-color: #f44336;
+    -webkit-box-shadow: 0 12px 20px -10px rgba(244,67,54,.28), 0 4px 20px 0 rgba(0,0,0,.12), 0 7px 8px -5px rgba(244,67,54,.2);
+    box-shadow: 0 12px 20px -10px rgba(244,67,54,.28), 0 4px 20px 0 rgba(0,0,0,.12), 0 7px 8px -5px rgba(244,67,54,.2);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}

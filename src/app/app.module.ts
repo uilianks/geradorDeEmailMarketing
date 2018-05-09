@@ -1,3 +1,4 @@
+import { AuthGuard } from './login-page/auth.guard';
 import { Http, HttpModule } from '@angular/http';
 import { LoginService } from './login-page/login.service';
 import { DbclippingService } from './dbclipping/dbclipping.service';
@@ -14,7 +15,7 @@ import { EditDbclippingComponent } from './dbclipping/edit-dbclipping/edit-dbcli
 import { ShowDbclippingComponent } from './dbclipping/show-dbclipping/show-dbclipping.component';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { ModalAddDestaquesComponent } from './dbclipping/edit-dbclipping/modal-add-destaques/modal-add-destaques.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalAddNormaissComponent } from './dbclipping/edit-dbclipping/modal-add-normaiss/modal-add-normaiss.component';
 import { ModalAddVagasComponent } from './dbclipping/edit-dbclipping/modal-add-vagas/modal-add-vagas.component';
 import { ModalAddColaboradoresComponent } from './dbclipping/edit-dbclipping/modal-add-colaboradores/modal-add-colaboradores.component';
@@ -55,9 +56,10 @@ import { HttpClientModule } from '@angular/common/http';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
-  providers: [DbclippingService,LoginService, HttpClientModule],
+  providers: [DbclippingService,LoginService, HttpClientModule,AuthGuard, NgbActiveModal],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

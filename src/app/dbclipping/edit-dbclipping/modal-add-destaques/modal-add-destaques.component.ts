@@ -1,6 +1,6 @@
 import { DbclippingService } from './../../dbclipping.service';
 import { Component, OnInit, Output, Input, EventEmitter, ViewChild, ViewEncapsulation } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModal, ModalDismissReasons, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -13,10 +13,10 @@ export class ModalAddDestaquesComponent implements OnInit {
   private newTitle;
   private newImagem;
   @Output() private newDesc;
-
-
-  constructor(private dbclippingService: DbclippingService,private modalService: NgbModal) { }
   closeResult: string;
+
+
+  constructor(private dbclippingService: DbclippingService,private modalService: NgbModal, public activeModal: NgbActiveModal) { }
 
   ngOnInit() {
   }
@@ -30,6 +30,7 @@ export class ModalAddDestaquesComponent implements OnInit {
       this.newDesc = ''; // clear input form value
     });
   }
+
   getDestaques(){
     return this.dbclippingService.get().then(destaques => {
       this.destaques = destaques;

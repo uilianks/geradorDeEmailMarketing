@@ -1,6 +1,8 @@
 import { DbclippingService } from './../dbclipping.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { AnimateTimings } from '@angular/core/src/animation/dsl';
+import { IfObservable } from 'rxjs/observable/IfObservable';
+import { identifierModuleUrl } from '@angular/compiler';
 
 
 @Component({
@@ -28,7 +30,6 @@ export class ShowDbclippingComponent implements OnInit {
     this.dbservice.colaboradoresShow.subscribe(colaboradores => this.colaboradores = colaboradores)
     this.dbservice.aniversariantesShow.subscribe(aniversariantes => this.aniversariantes = aniversariantes)
     this.dbservice.dbnamidiaShow.subscribe(dbnamidia => this.dbnamidia = dbnamidia)
-
   }
 
   deleteDestaques(x: number){
@@ -52,21 +53,23 @@ export class ShowDbclippingComponent implements OnInit {
 
  //MOVE UP DOWN DO DESTAQUES
   moveUp(x:number){
-    if(x < x){
-      console.log("erro")
-    }else{
+    if(x > 0){
       var temp = this.destaques[x]
       this.destaques[x] = this.destaques[x-1]
       this.destaques[x-1] = temp
     }
- 
   }
 
   moveDown(x:number){
-    var temp = this.destaques[x]
-    this.destaques[x] = this.destaques[x+1]
-    this.destaques[x+1] = temp
-  }
+    if(x < this.destaques.length-1){
+      var temp = this.destaques[x]
+      this.destaques[x] = this.destaques[x+1]
+      this.destaques[x+1] = temp
+    }
+} 
+    
+ 
+  
 
  //MOVE UP DOWN DAS NOTICIAS NORMAIS
 
